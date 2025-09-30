@@ -1,0 +1,19 @@
+# if e else
+
+numero = int(input('Digite sua idade:'))
+
+if numero >= 18:
+ print("Você é maior de idade")
+else: 
+ print("Você é menor de idade")
+
+nota = int(input('Digite sua nota:'))
+
+if nota >= 90:
+ print("Aprovado com excelência")
+
+elif nota >= 60:
+ print("Aprovado")
+
+else:
+ print("Reprovado")

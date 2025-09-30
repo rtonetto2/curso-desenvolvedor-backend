@@ -1,0 +1,23 @@
+class Funcionario:
+  def __init__(self, nome, salario, função):
+    self.nome = nome
+    self._salario = salario
+    self.função = função
+
+  def get_salario(self):
+    return self.nome and self._salario
+  
+  def atualizar(self, valor):
+    self._salario += valor
+      
+class  Gerente(Funcionario):
+   def mostrar_departamento(self):
+     return self.função
+
+
+
+f1 = Gerente("Maria", 1000, "Gerente")
+print(f1.get_salario())  #acessa o salario
+f1.atualizar(3500) #atualiza o salario
+print(f1.get_salario())
+print(f1.mostrar_departamento())

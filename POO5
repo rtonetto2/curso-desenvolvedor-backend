@@ -1,0 +1,21 @@
+class veiculo:
+  def __init__(self, marca, ano):
+    self.marca = marca
+    self.ano = ano
+
+    def mostrar_tipo(self):
+      print("Veículo genérico...")
+
+class  Carro(veiculo):
+   def mostrar_tipo(self):
+     print(f"{self.marca} - {self.ano} ")
+
+class Moto(veiculo):
+   def mostrar_tipo(self):
+     print(f"{self.marca} - {self.ano} ")
+
+carro = Carro("Astra", 2002)
+moto = Moto("Hornet", 2023)
+
+carro.mostrar_tipo() #auau
+moto.mostrar_tipo() #miau

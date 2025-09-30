@@ -1,0 +1,34 @@
+
+numero = int(input('Digite um numero:'))
+
+if numero > 0:
+ print("Numero positivo")
+
+elif numero < 0:
+ print ("Numero negativo")
+
+else: 
+ print("Zero")
+
+
+nota = int(input('Digite sua nota:'))
+
+if nota >= 90:
+ print("Aprovado com excelência")
+
+elif nota >= 60:
+ print("Aprovado")
+
+else:
+ print("Reprovado")
+
+idade = int(input('Digite sua idade:'))
+
+if idade < 13:
+ print("Criança")
+
+elif idade <= 17 :
+ print("Adolescente")
+
+else:
+ print("Adulto")

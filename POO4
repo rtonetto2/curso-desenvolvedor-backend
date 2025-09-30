@@ -1,0 +1,16 @@
+class Produto: 
+  def __init__(self, nome, preco):
+    self.nome = nome
+    self._preco = preco
+
+  def get_preco(self):
+    return self._preco
+  
+  def aplicar(self):
+    self._preco *= 0.9
+
+p1 = Produto("Camisa", 100)
+p2 = Produto("Calça", 200)
+
+print(f"{p1.nome} - Preço Original: {p1.get_preco}, Preço com desconto: {p1.aplicar}")
+print(f"{p2.nome} - Preço Original: {p2.get_preco}, Preço com desconto: {p2.aplicar}")

@@ -1,0 +1,33 @@
+#tuplas - ordem fixa, imutáveis, permitem repetição.
+
+minha_tupla = (1,2,3)
+tupla_com_um = (5,) # a vírgula no final é obrigatória
+
+x,y,z = (1,2,3)
+print(x,y,z) # 1,2,3
+
+t = (1,2,2,2,3,5,4)
+print(t.count(2)) #o q se repete
+print(t.index(3)) #qual posição ele está
+print(len(t)) #
+
+
+numeros =[1,2,2,3,4,5,6]
+conj = set(numeros)
+print(conj)
+
+lista1 = ["ana", "eduardo", "raissa", "junio"]
+lista2 = ["ana", "fabio", "joão"]
+
+conj1 = set(lista1)
+conj2 = set(lista2)
+
+comum = conj1.intersection(conj2)
+diferente = (conj1 -conj2)
+print(comum)
+print(diferente)
+
+frase = input("Digite uma frase:")
+for lista in frase:
+    frase.split()
+    

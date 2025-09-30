@@ -1,0 +1,35 @@
+#
+nome = (input("Digite seu nome:"))
+email = (input("Digite seu email:"))
+senha = (input("Digite sua senha atual:"))
+nova_senha = (input("Digite a sua nova senha:"))
+
+class Usuario:
+    def __init__(self, nome, email, senha):
+        self.nome = nome
+        self.email = email
+        self.senha = senha
+
+    def mostrar_email(self):
+        print(f"O email de {self.nome} é: {self.email}")    
+    
+    def alterar_senha(self, nova_senha):
+        self.senha = nova_senha
+        print(f"a senha de {self.nome} foi alterada com sucesso")
+
+    def autenticar_usuario(self, email, senha):
+        return self.email == email and self.senha == senha
+        
+    
+    def __str__(self):
+        return f"Usuário: {self.nome} - {self.email}"
+
+pessoa1 = Usuario(nome, email, senha)
+
+pessoa1.mostrar_email()
+
+pessoa1.alterar_senha(nova_senha)
+
+print(pessoa1.autenticar_usuario(email, nova_senha))
+
+print(pessoa1.__str__())

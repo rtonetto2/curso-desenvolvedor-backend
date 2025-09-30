@@ -1,0 +1,7 @@
+import math
+
+print(math.sqrt(25))
+
+import requests
+resposta = requests.get("https://www.youtube.com/shorts/1T06pEuRBVI")
+print(resposta.status_code)

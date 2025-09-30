@@ -1,0 +1,26 @@
+#primeiro progama em python - desafio usando operadores
+
+nome = input("Digite seu nome:")
+idade = int(input("Digite sua idade:"))
+
+y = 100
+menos= y-idade
+print ('Você terá 100 anos em:', menos)
+
+e = 18
+Verifique= (idade>=e)
+print('Você é maior de idade?:', Verifique)
+
+a = 13
+b = 19
+
+Verifique= (idade>=a)
+Verifique= (idade<=b)
+print('Sua idade está entre 13 e 19 anos (adolescente)?:', Verifique)
+
+x= 5
+soma= (idade + x)
+print("Em 5 anos você terá:", soma)
+
+Verifique= ('a' in nome.lower())
+print('No seu nome têm a letra "a"?:', Verifique)

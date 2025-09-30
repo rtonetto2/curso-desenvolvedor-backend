@@ -1,0 +1,10 @@
+'''import requests
+resposta = requests.get("https://www.youtube.com/shorts/1T06pEuRBVI")
+print(resposta)'''
+
+from translate import Translator
+text = input("Digite o texto a ser traduzido:")
+translator = Translator(from_lang="english", to_lang="pt=br")
+result = translator.translate(text)
+print(result)
+

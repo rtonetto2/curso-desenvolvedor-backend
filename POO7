@@ -1,0 +1,24 @@
+class ContaCorrente:
+    def __init__(self,titular):
+     self._titular = titular
+     self._saldo = 0
+
+    def depositar(self, valor):
+     self._saldo += valor
+     print(f"Você depositou R${valor:.2f}.")
+
+    def sacar_dinheiro(self, valor):
+       if valor <= self._saldo:
+           self._saldo -= valor
+           print(f"Você acabou de sacar R${valor:.2f}.")
+       else:
+        print("Saldo insuficiente para realizar o saque")
+        
+    def mostrar_saldo(self):
+        print(f"Saldo atual de {self._titular}: R${self._saldo:.2f}")
+
+conta = ContaCorrente("Marco")
+conta.depositar(500)
+conta.sacar_dinheiro(400)
+conta.sacar_dinheiro(200)
+conta.mostrar_saldo()
