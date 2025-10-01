@@ -1,0 +1,46 @@
+
+class Animal:
+    def __init__(self, nome):
+        self.__nome = nome   
+
+    def get_nome(self):
+        return self.__nome
+
+    def set_nome(self, novo_nome):
+        self.__nome = novo_nome
+
+    def tipo(self):
+        return f"{self.__nome} é um animal."
+
+class Mamifero(Animal):
+    def __init__(self, nome, tem_pelos=True):
+        super().__init__(nome)
+        self.__tem_pelos = tem_pelos
+
+    def get_tem_pelos(self, nome):
+        self.__nome = nome
+        return f"{self.__nome} é um mamifero."
+        
+class Cachorro(Mamifero):
+    def __init__(self, nome, raca):
+        super().__init__(nome, tem_pelos=True)
+        self.__raca = raca
+
+    def get_raca(self):
+        return self.__raca
+
+    def set_raca(self, nova_raca):
+        self.__raca = nova_raca
+
+
+dog = Cachorro("Natal", "Yorkshire")
+
+print(dog.tipo())   
+print(dog.get_tem_pelos())
+print("Nome:", dog.get_nome())   
+dog.set_nome("Thor")            
+print("Novo nome:", dog.get_nome())
+
+print("Raça:", dog.get_raca())
+dog.set_raca("Pastor Alemão")
+print("Nova raça:", dog.get_raca())

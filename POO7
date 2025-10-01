@@ -1,7 +1,7 @@
 class ContaCorrente:
     def __init__(self,titular):
      self._titular = titular
-     self._saldo = 0
+     self._saldo = 100
 
     def depositar(self, valor):
      self._saldo += valor
@@ -14,11 +14,11 @@ class ContaCorrente:
        else:
         print("Saldo insuficiente para realizar o saque")
         
-    def mostrar_saldo(self):
+    def get_saldo(self):
         print(f"Saldo atual de {self._titular}: R${self._saldo:.2f}")
 
 conta = ContaCorrente("Marco")
 conta.depositar(500)
-conta.sacar_dinheiro(400)
-conta.sacar_dinheiro(200)
-conta.mostrar_saldo()
+conta.sacar_dinheiro(450)
+conta.sacar_dinheiro(100)
+conta.get_saldo()

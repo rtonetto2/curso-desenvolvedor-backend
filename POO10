@@ -1,0 +1,21 @@
+from abc import ABC, abstractmethod
+
+class   Instrumento(ABC):
+    @abstractmethod
+    def tocar(self):
+        pass
+
+class Violão(Instrumento):
+    def tocar(self):
+        return "O Violão você toca com os dedos."
+    
+class Bateria(Instrumento):
+    def tocar(self):
+        return "A Bateria você toca com as baquetas."
+    
+Instrumentos = [Violão(), Bateria()]
+
+for t in Instrumentos:
+    print(t.tocar())
+    
+    

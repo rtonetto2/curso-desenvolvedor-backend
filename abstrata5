@@ -1,0 +1,26 @@
+from abc import ABC, abstractmethod
+
+class   executar_movimento(ABC):
+    @abstractmethod
+    def mover(self):
+        pass
+
+class Carro(executar_movimento):
+    def mover(self):
+        return "O Carro se move pela estrada."
+    
+class Aviao(executar_movimento):
+    def mover(self):
+        return "O Avião se move pelos ares."
+    
+class Barco(executar_movimento):
+    def mover(self):
+        return "O Barco se move pela água."
+    
+    
+transportes = [Carro(), Aviao(), Barco()]
+
+for t in transportes:
+    executar_movimento(t)
+    
+    

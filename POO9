@@ -1,0 +1,13 @@
+class Pessoa:
+  def __init__(self, nome, idade, materia):
+    self.nome = nome
+    self.idade = idade
+    self.materia = materia
+
+class Professor(Pessoa):
+  
+  def mostrar_dados(self):
+     print(f"O Professor {self.nome} de {self.idade} anos, leciona a materia de {self.materia}.")
+  
+p1 = Professor("Diogo", 38, "SHP")
+p1.mostrar_dados()

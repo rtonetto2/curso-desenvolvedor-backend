@@ -1,0 +1,33 @@
+import math
+
+from abc import ABC, abstractmethod
+
+class Forma(ABC):
+   @abstractmethod
+   def area(self):
+      pass
+
+class Retangulo(Forma):
+    def __init__(self, base, altura):
+     self.base = base
+     self.altura = altura
+
+    def area(self):
+      return self.base * self.altura 
+   
+class Circulo(Forma):
+    def __init__(self, pi, raio):
+      self.pi = pi
+      self.pi = 3.14
+      self.raio = raio
+
+    def area(self):
+      return self.pi * self.raio^2 
+   
+'''r = Retangulo(2, 4)
+c = Circulo(5)'''
+formas = [Retangulo(10,5) Circulo(5)]
+'''print(r.calcule_area())
+print(c.calcule_area())'''
+for f in formas:
+   print(f.area())
